@@ -1,0 +1,24 @@
+.placeholder(@color, @fontStyle: 18px){
+    &::-webkit-input-placeholder {
+            color: @color;
+            font: @fontStyle;
+        }
+        &:-moz-placeholder {
+            color: @color;
+            font: @fontStyle;
+        }
+        &::-moz-placeholder {
+            color: @color;    
+            font: @fontStyle;   
+        }
+        &:-ms-input-placeholder {  
+            color: @color;  
+            font: @fontStyle;  
+        }
+}
+
+.clearfix {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
