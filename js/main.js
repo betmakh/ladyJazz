@@ -1,6 +1,14 @@
 $(function(){
 	feedbackResize ();
 
+	$('.offers').find('.offer').on('click',function(e) {
+		e.stopPropagation()
+		$('.eyes').show();
+	})
+	$('.eyes').on('click',function(){
+		hidePopup();
+	})
+
 	$('.popup').on( "click", function (event){
         var t=event.target||event.srcElement;
         if(t.className != "popup") return;
@@ -45,6 +53,7 @@ function showPopup () {
 	$('.popup').show();	
 }
 function hidePopup () {
+	$('.eyes').hide();
 	$('.popup').hide();	
 }
 

@@ -1,7 +1,7 @@
 .popup {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 25;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -165,6 +165,7 @@
   color: #ff1d58;
 }
 .section-inner {
+  position: relative;
   width: 800px;
   margin: auto;
 }
@@ -366,6 +367,54 @@ h4 {
   background: #ececec;
   padding-bottom: 40px;
 }
+.eyes {
+  display: none;
+  z-index: 20;
+  position: absolute;
+  zoom: 1;
+  width: 100%;
+  height: 75%;
+  left: 0;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.82);
+}
+.eyes:before {
+  content: '';
+  display: block;
+}
+.eyes:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.eyes .eye {
+  padding-top: 143px;
+  background: 50% top no-repeat;
+  text-align: center;
+  width: 235px;
+  font: 30px 'calibri' sans-serif;
+  float: left;
+  margin: 12px 0;
+}
+.eyes .eye:nth-of-type(2n) {
+  float: right;
+  margin-right: 114px;
+}
+.eyes .eye:nth-of-type(n) {
+  margin-left: 108px;
+}
+.eyes .eye:nth-of-type(1) {
+  background-image: url(../img/eyes/eye1.png);
+}
+.eyes .eye:nth-of-type(2) {
+  background-image: url(../img/eyes/eye2.png);
+}
+.eyes .eye:nth-of-type(3) {
+  background-image: url(../img/eyes/eye3.png);
+}
+.eyes .eye:nth-of-type(4) {
+  background-image: url(../img/eyes/eye4.png);
+}
 .offers {
   width: 540px;
   margin: 20px auto;
@@ -373,7 +422,7 @@ h4 {
 }
 .offers + .button {
   display: block;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 30px;
   width: 250px;
 }
@@ -390,6 +439,7 @@ h4 {
   clear: both;
 }
 .offers .offer {
+  cursor: pointer;
   margin: 20px auto;
   display: block;
   width: 202px;
