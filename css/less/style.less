@@ -343,19 +343,22 @@ h4 {
     margin: 90px auto 40px;
 }
 .circle {
+    box-sizing: content-box;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     overflow:hidden;
     background:#fff;
     border:3px solid #ff1d58;
-    padding:3px;
+    // padding:3px;
     position:absolute;
-    top:-45px;
+    top:-60px;
     left:5px;
     img{
-        width: 77px;
-        height: 77px;
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
     }
 }
 .name {
